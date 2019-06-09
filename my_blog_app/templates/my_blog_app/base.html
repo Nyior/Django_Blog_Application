@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link rel = "stylesheet" type = "text/css" href = "{% static 'my_blog_app/bootstrap.min.css' %}"> <!--offline-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+ <link rel = "stylesheet" type = "text/css" href = "{% static 'my_blog_app/mdb.min.css' %}">    <!-- offline -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.1/css/mdb.min.css" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'my_blog_app/main.css' %}">
+
+        {% if title %}
+            <title>Django Blog {{title}}</title>
+        {% else %}
+            <title>Django_blog </title>
+        {% endif %}
+
+</head>
+<body>
+    <header>
+      <nav class="navbar  navbar-expand-lg navbar-dark pink scrolling-navbar">
+        <a class="navbar-brand" href="{% url 'blog-home' %} "><strong>Navbar</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="{% url 'blog-home' %}">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog-about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Opinions</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-flex-icons">
+            {% if user.is_authenticated %}
+              <li class="nav-item ">
+                  <a class="nav-link " href = "{% url 'post-create' %}">New Post</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " href = "{% url 'users-profile' %}">Profile</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link " href = "{% url 'logout' %}">Logout</a>
+              </li>
+             {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href = "{% url 'users-register' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href = "{% url 'login' %}">Login</a>
+                </li>
+              {% endif %}
+
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+    <main class = "container">
+        <div class = "row m-0 p-0 h-100">
+            <div class = "col-md-8">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class = "alert alert-{{ message.tags }}">
+                            {{ message }}
+                         </div>
+                    {% endfor %}
+                {% endif %}
+                {% block content %}{% endblock content %}
+            </div>
+            <div class = "col-md-4">
+                <div class = "content-section border p-2 mt-2">
+                    <h3>Our Side bar</h3>
+                    <p class = "text-muted">
+                        <ul class = "list-group">
+                            <li class = "list-group-item list-group-item-light">Latest post</li>
+                            <li class = "list-group-item list-group-item-light">Announcements</li>
+                            <li class = "list-group-item list-group-item-light">Calendars</li>
+                            <li class = "list-group-item list-group-item-light">etc</li>
+                        </ul>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+      <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'my_blog_app/jquery.min.js' %}"></script> <!-- offline -->
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="{% static 'my_blog_app/popper.min.js' %}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'my_blog_app/bootstrap.min.js' %}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.1/js/mdb.min.js"></script>
+    <script type="text/javascript" src="{% static 'my_blog_app/mdb.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+[
+  {
+    "title" : "Come all ye faithful",
+    "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+    "user_id" : 4
+  },
+  {
+    "title" : "My Holiday",
+    "content" : "Arcu odio ut sem nulla pharetra diam sit amet. Amet consectetur adipiscing elit ut aliquam purus. Adipiscing tristique risus nec feugiat in fermentum. Non nisi est sit amet. Nisl suscipit adipiscing bibendum est",
+    "user_id" : 5
+  },
+  {
+    "title" : "Secondary days",
+    "content" : "Velit ut tortor pretium viverra suspendisse potenti. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque.",
+    "user_id" : 6
+  },
+  {
+    "title" : "Django is cool",
+    "content" : "Nisl suscipit adipiscing bibendum est ultricies. Venenatis cras sed felis eget velit aliquet. Commodo ullamcorper a lacus vestibulum. Consectetur adipiscing elit duis tristique sollicitudin. Consequat id porta nibh venenatis cras sed..",
+    "user_id" : 7
+  },
+  {
+    "title" : "On the way to django-res",
+    "content" : "Eu turpis egestas pretium aenean pharetra. Non sodales neque sodales ut etiam. Mauris a diam maecenas sed enim ut sem. Lectus magna fringilla urna porttitor rhoncus dolor purus non.",
+    "user_id" : 8
+  },
+  {
+    "title" : "This blog is shitty",
+    "content" : "Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Elementum integer enim neque volutpat ac tincidunt vitae.",
+    "user_id" : 9
+  },
+  {
+    "title" : "Raw materials",
+    "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu nisl nunc mi ipsum faucibus vitae aliquet nec..",
+    "user_id" : 5
+  },
+  {
+    "title" : "Lates post of the month",
+    "content" : "Quis viverra nibh cras pulvinar mattis. Tortor id aliquet lectus proin. Tincidunt arcu non sodales neque sodales ut etiam sit amet. Sagittis vitae et leo duis ut diam. Dignissim convallis aenean et tortor at risus viverra.",
+    "user_id" : 4
+  },
+  {
+    "title" : "Joyful heart",
+    "content" : "Vivamus at augue eget arcu dictum varius. Cras ornare arcu dui vivamus arcu. Arcu odio ut sem nulla pharetra diam sit amet. Amet consectetur adipiscing elit ut aliquam purus. ",
+    "user_id" : 6
+  },
+  {
+    "title" : "Mass casualty",
+    "content" : "Adipiscing tristique risus nec feugiat in fermentum. Non nisi est sit amet. Nisl suscipit adipiscing bibendum est. Velit ut tortor pretium viverra suspendisse potenti. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque.",
+    "user_id" : 9
+  }
+]

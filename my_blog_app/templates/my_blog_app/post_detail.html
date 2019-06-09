@@ -1,0 +1,34 @@
+{% extends 'my_blog_app\base.html'%}
+{% block content %}
+    <article class = "media content-section mb-2 mt-2 p-1 border border-radius">
+        <a href="{{ object.author.profile.image.url }}" >
+            <img class="rounded-circle mr-2" style="height: 50px; width: 50px"
+                 src = "{{ object.author.profile.image.url }}">
+        </a>
+        <div class = "media-body">
+            <div class = "article-meta-data border-bottom mb-2">
+                <a class = "mr-2" href = "{% url 'user-posts' object.author.username%}">{{ object.author }}</a>
+                <!--<small class = "text-muted">{{ post.date_posed}}</small>-->
+                <small class = "text-muted">
+                    {{ object.date_posed|date:"F d, Y"}}
+                </small>
+                {% if object.author == user %}
+                <div>
+                    <a class = "btn btn-sm btn-primary mt-1 mb-1"
+                       href ="{% url 'post-update' object.id %}">
+                        update
+                    </a>
+                    <a class = "btn btn-sm btn-danger mt-1 mb-1"
+                       href ="{% url 'post-delete' object.id %}">
+                        delete
+                    </a>
+                </div>
+                {% endif %}
+                <!-- filters for formating dates in python F= full month, d = dayin two digits, Y full year -->
+            </div>
+            <h2  class = "article-title">{{ object.title }}</h2>
+            <p class = "article-content">{{ object.content }}</p>
+        </div>
+    </article>
+
+{% endblock content%}

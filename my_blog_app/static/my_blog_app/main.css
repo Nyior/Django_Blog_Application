@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Crimson+Text|Ropa+Sans');
+@import url('https://fonts.googleapis.com/css?family=Radley');
+
+html,
+body,
+header,{
+
+	font-family: 'Ropa Sans', sans-serif;
+	letter-spacing: -1px;
+}
+
+.socialbuttons{
+	background-color: #211F1D;
+	}
+.page-footer{
+	background-color: #111110;
+	}
+.account-img{
+
+ }
+
+.navbar{
+	box-shadow: none !important;
+}
+
+.navbar-brand{
+  font-family: 'Major Mono Display', monospace;
+
+}
+
+.top-nav-collapse {
+  background-color: black;
+}
+
+body {
+   font-family: Verdana, Arial, sans-serif;
+   font-size: smaller;
+
+   color: #555;
+
+}
+
+h1 {
+   letter-spacing: -1px;
+   font-size: 1.6em;
+   color: #be7429;
+
+}
+
+h2 {
+   text-align: left;
+   letter-spacing: -1px;
+   font-size: 1.4em;
+   color: #be7429;
+
+}
+
+
+a {
+  color: #be7429;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: black;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: black;
+  }
+}
